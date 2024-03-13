@@ -1,0 +1,46 @@
+1. Bitcoin Inflows/Outflows to Exchanges
+    - Data Needed: Two separate numerical values for the combined inflows and outflows of Bitcoin to/from exchanges.
+    - Example APIs: 
+        > CryptoQuant: professional (109$/month) or premium plan
+        > Glassnode: advanced plan (39$/month)
+
+2. Stables Inflows/Outflows to Exchanges
+    - Data Needed: Two separate numerical values for the combined inflows and outflows of stablecoins to/from exchanges.
+    - Example APIs: 
+        > CryptoQuant: professional (109$/month) or premium plan
+        > Glassnode: advanced plan (39$/month)
+
+3. Bitcoin Exchange Reserves
+    - Data Needed: A numerical value representing the total amount of Bitcoin held in exchange reserves.
+    - Example APIs: 
+        > CryptoQuant: professional (109$/month) or premium plan
+        > Glassnode: advanced plan (39$/month)
+
+4. Stable Coin Exchange Reserves
+    - Data Needed: A numerical value representing the total dollar value of stablecoins held in exchange reserves.
+    - Example APIs:
+        > CryptoQuant: professional (109$/month) or premium plan
+        > Glassnode: advanced plan (39$/month)
+
+5. Hot Pairs from an Exchange
+    - Data Needed: Information about the biggest gainers and losers of the day, including the ticker, logo, current price, and 24-hour price change.
+    - Example APIs: 
+        > CoinMarketCap: biggest gainer/losers, startup plan (79$/month)
+        > Binance API, CoinGecko API.
+
+6. Total Value Locked
+    - Data Needed: Information about the total value locked in different blockchain chains, including chain names and the value in dollars.
+    - Example APIs: DeFi Pulse API, DeFi Llama API.
+    - Relevant Link: DeFiLlama Chains
+
+7. Stats about a Specific Coin
+    - Data Needed: Detailed information about a specific cryptocurrency, including its name, ticker, price, network, exchange listings, market cap, and number of wallet holders.
+    - Example API: CoinMarketCap API, CoinGecko API.
+    - Relevant Link: CoinMarketCap Bitcoin Page
+
+
+DONE:
+    - total market cap
+    - fear and greed index
+    - btc dominance
+    - market cap leaderboard (with information about each coin)
