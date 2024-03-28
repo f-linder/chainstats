@@ -28,11 +28,6 @@
         > CoinMarketCap: biggest gainer/losers, startup plan (79$/month)
         > Binance API, CoinGecko API.
 
-6. Total Value Locked
-    - Data Needed: Information about the total value locked in different blockchain chains, including chain names and the value in dollars.
-    - Example APIs: DeFi Pulse API, DeFi Llama API.
-    - Relevant Link: DeFiLlama Chains
-
 7. Stats about a Specific Coin
     - Data Needed: Detailed information about a specific cryptocurrency, including its name, ticker, price, network, exchange listings, market cap, and number of wallet holders.
     - Example API: CoinMarketCap API, CoinGecko API.
@@ -44,3 +39,4 @@ DONE:
     - fear and greed index
     - btc dominance
     - market cap leaderboard (with information about each coin)
+    - total value locked
