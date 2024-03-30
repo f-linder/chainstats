@@ -80,8 +80,9 @@ def get_fear_and_greed():
         data = list(data['data'])
         value = data[0]['value']
         classification = data[0]['value_classification']
+        time_until_update = data[0]['time_until_update']
 
-        return {'value': value, 'value_classification': classification}
+        return {'value': value, 'value_classification': classification, 'time_until_update': time_until_update}
 
     except requests.RequestException as e:
         return f"Failed with {e}"
@@ -99,7 +100,10 @@ def get_leaderboard(num):
     - list: [{'name': str,
               'symbol': str,
               'price': float,
+              'percent_change_1h': float
               'percent_change_24h': float,
+              'percent_change_7d': float,
+              'percent_change_30d': float,
               'market_cap': float,
               'market_cap_dominance': float,
               'volume_24h': float,
@@ -131,13 +135,16 @@ def get_leaderboard(num):
         for c in data:
             d = {'name': c['name'],
                  'symbol': c['symbol'],
-                 'price': c['price'],
-                 'percent_change_24h': c['percent_change_24h'],
-                 'market_cap': c['market_cap'],
-                 'market_cap_dominance': c['market_cap_dominance'],
-                 'volume_24h': c['volume_24h'],
-                 'volume_change_24h': c['volume_change_24h'],
-                 'logo_url': f'https://assets.coincap.io/assets/icons/{c["symbol"]}@2x.png'}
+                 'price': c['quote']['USD']['price'],
+                 'percent_change_1h': c['quote']['USD']['percent_change_1h'],
+                 'percent_change_24h': c['quote']['USD']['percent_change_24h'],
+                 'percent_change_7d': c['quote']['USD']['percent_change_7d'],
+                 'percent_change_30d': c['quote']['USD']['percent_change_30d'],
+                 'market_cap': c['quote']['USD']['market_cap'],
+                 'market_cap_dominance': c['quote']['USD']['market_cap_dominance'],
+                 'volume_24h': c['quote']['USD']['volume_24h'],
+                 'volume_change_24h': c['quote']['USD']['volume_change_24h'],
+                 'logo_url': f'https://assets.coincap.io/assets/icons/{c["symbol"].lower()}@2x.png'}
 
             ret.append(d)
 
