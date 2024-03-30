@@ -127,7 +127,7 @@ def metrics_btc_dominance():
         table_btc_dominance.delete_many({})
         btc_dominance = data.get_btc_dominance()
         btc_dominance['timestamp'] = current_time
-        table_total_mcap.insert_one(btc_dominance)
+        table_btc_dominance.insert_one(btc_dominance)
 
     return jsonify({key: value for key, value in btc_dominance.items()
                     if key != 'timestamp' and key != '_id'}), 200
